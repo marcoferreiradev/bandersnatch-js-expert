@@ -26,7 +26,7 @@ for mediaFile in `ls $ASSETSFOLDER | grep .mp4`; do
         -vf "scale=-1:720" \
         -v quiet \
         $OUTPUT720.mp4
-
+    
     echo 'rendering in 360p'
     ffmpeg -y -i $INPUT \
         -c:a aac -ac 2 \
@@ -39,7 +39,7 @@ for mediaFile in `ls $ASSETSFOLDER | grep .mp4`; do
         -vf "scale=-1:360" \
         -v quiet \
         $OUTPUT360.mp4
-
+    
     echo 'rendering in 144p'
     ffmpeg -y -i $INPUT \
         -c:a aac -ac 2 \
